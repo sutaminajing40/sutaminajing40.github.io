@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["FD4GN48DS5.app.yose.Yose"],
+        "appID": "FD4GN48DS5.app.yose.Yose",
+        "components": [
+          { "/": "/yose/join/*" }
+        ],
+        "paths": ["/yose/join/*"]
+      }
+    ]
+  }
+}

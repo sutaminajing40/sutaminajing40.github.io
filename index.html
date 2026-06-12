@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ヨセ — 仲間と続ける習慣アプリ</title>
+<meta property="og:title" content="ヨセ — 仲間と続ける習慣アプリ">
+<meta property="og:description" content="2〜4人の小さなチームで、毎日の目標を灯し合う習慣アプリ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #FAFAF8; --color-surface: #FFFFFF; --color-border: #E4E2DA;
+    --color-text: #1B1B19; --color-text-muted: #6F6D65;
+    --color-accent: #E8602C; --color-accent-hover: #C94E20; --color-accent-text: #FFFFFF;
+    --font-jp-sans: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    --space-2: 8px; --space-3: 12px; --space-5: 24px; --space-6: 32px;
+    --radius-md: 8px;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--color-bg); color: var(--color-text);
+    font-family: var(--font-jp-sans); line-height: 1.8; letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100svh; display: grid; place-items: center; padding: var(--space-5);
+  }
+  main { text-align: center; max-width: 420px; }
+  .brand { display: inline-flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-3); }
+  .brand span { font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em; }
+  p { color: var(--color-text-muted); font-size: 0.9375rem; margin-bottom: var(--space-6); }
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 500;
+    background: var(--color-accent); color: var(--color-accent-text);
+    padding: 12px 24px; min-height: 48px; border-radius: var(--radius-md);
+  }
+  .btn:hover { background: var(--color-accent-hover); }
+  .btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 2C12 2 6 8.5 6 14a6 6 0 0 0 12 0c0-2-.8-3.8-1.8-5.4C15 10 13.5 11 13.5 11S14.5 6 12 2Z" fill="#E8602C"/>
+    </svg>
+    <span>ヨセ</span>
+  </div>
+  <p>2〜4人の小さなチームで、毎日の目標を灯し合う習慣アプリ。</p>
+  <a class="btn" href="https://apps.apple.com/app/id6774865970">App&nbsp;Storeで入手</a>
+</main>
+</body>
+</html>

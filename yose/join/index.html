@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ヨセ — チームへの招待</title>
+<meta property="og:title" content="ヨセ — チームへの招待">
+<meta property="og:description" content="仲間と一緒に習慣を続けるアプリ「ヨセ」のチームに招待されています。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #FAFAF8;
+    --color-surface: #FFFFFF;
+    --color-surface-sunken: #F2F1EC;
+    --color-border: #E4E2DA;
+    --color-border-strong: #CFCCC1;
+    --color-text: #1B1B19;
+    --color-text-muted: #6F6D65;
+    --color-text-subtle: #9A988F;
+    --color-accent: #E8602C;        /* Yose BrandFlame */
+    --color-accent-hover: #C94E20;
+    --color-accent-soft: #FFF3E6;   /* Yose BrandWarmth */
+    --color-accent-text: #FFFFFF;
+    --color-focus: #E8602C;
+    --font-jp-sans: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    --font-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+    --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px; --space-6: 32px; --space-8: 48px;
+    --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px;
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-jp-sans);
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: var(--space-5);
+  }
+  main { width: 100%; max-width: 420px; }
+  .brand {
+    display: flex; align-items: center; gap: var(--space-2);
+    margin-bottom: var(--space-5);
+    animation: rise .5s var(--ease-out) both;
+  }
+  .brand svg { flex: none; }
+  .brand span { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em; }
+  .card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    animation: rise .5s var(--ease-out) .07s both;
+  }
+  h1 {
+    font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.35;
+    margin-bottom: var(--space-3);
+  }
+  .lead { color: var(--color-text-muted); font-size: 0.9375rem; margin-bottom: var(--space-5); }
+  .code-label {
+    font-size: 0.8125rem; color: var(--color-text-subtle);
+    letter-spacing: 0.06em; margin-bottom: var(--space-2);
+  }
+  .code-box {
+    display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
+    background: var(--color-surface-sunken);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-3) var(--space-4);
+    margin-bottom: var(--space-5);
+  }
+  .code-box code { font-family: var(--font-mono); font-size: 1.5rem; font-weight: 500; letter-spacing: 0.06em; }
+  .copy-btn {
+    font: inherit; font-size: 0.8125rem; font-weight: 500;
+    color: var(--color-accent);
+    background: none; border: none; cursor: pointer;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-sm);
+    min-height: 44px;
+  }
+  .copy-btn:hover { background: var(--color-accent-soft); }
+  .copy-btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+  .btn {
+    display: block; width: 100%; text-align: center; text-decoration: none;
+    font-weight: 500; font-size: 1rem;
+    padding: 12px 18px; min-height: 48px;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-3);
+  }
+  .btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+  .btn-primary { background: var(--color-accent); color: var(--color-accent-text); }
+  .btn-primary:hover { background: var(--color-accent-hover); }
+  .btn-secondary { background: transparent; color: var(--color-text); border: 1px solid var(--color-border-strong); }
+  .btn-secondary:hover { background: var(--color-surface-sunken); }
+  .hint { font-size: 0.8125rem; color: var(--color-text-subtle); margin-top: var(--space-4); }
+  .nocode h1 { margin-bottom: var(--space-4); }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+      <path d="M12 2C12 2 6 8.5 6 14a6 6 0 0 0 12 0c0-2-.8-3.8-1.8-5.4C15 10 13.5 11 13.5 11S14.5 6 12 2Z" fill="#E8602C"/>
+    </svg>
+    <span>ヨセ</span>
+  </div>
+
+  <div class="card" id="invite" hidden>
+    <h1>チームに招待されています</h1>
+    <p class="lead">仲間と一緒に習慣を続けるアプリ「ヨセ」のチームへの招待です。</p>
+    <p class="code-label">招待コード</p>
+    <div class="code-box">
+      <code id="code">------</code>
+      <button class="copy-btn" id="copy" type="button">コピー</button>
+    </div>
+    <a class="btn btn-primary" id="open-app" href="#">アプリで参加する</a>
+    <a class="btn btn-secondary" href="https://apps.apple.com/app/id6774865970">App&nbsp;Storeでアプリを入手</a>
+    <p class="hint">アプリを入れたあと、もう一度この招待リンクを開くか、コードをコピーして「チーム」タブで貼り付けると参加できます。</p>
+  </div>
+
+  <div class="card nocode" id="nocode" hidden>
+    <h1>招待コードが見つかりません</h1>
+    <p class="lead">リンクが途中で切れている可能性があります。送ってくれた人に、招待コード（6桁）を直接聞いてみてください。</p>
+    <a class="btn btn-secondary" href="https://apps.apple.com/app/id6774865970">App&nbsp;Storeでアプリを入手</a>
+  </div>
+</main>
+<script>
+  (function () {
+    var params = new URLSearchParams(location.search);
+    var raw = params.get("c") || params.get("code") || "";
+    // パス形式 /yose/join/ABC123 でも拾えるようにしておく
+    if (!raw) {
+      var m = location.pathname.match(/\/yose\/join\/([A-Za-z0-9]{6})\/?$/);
+      if (m) raw = m[1];
+    }
+    var code = raw.toUpperCase();
+    var valid = /^[A-Z0-9]{6}$/.test(code);
+    document.getElementById(valid ? "invite" : "nocode").hidden = false;
+    if (!valid) return;
+    document.getElementById("code").textContent = code;
+    document.getElementById("open-app").href = "yose://join/" + code;
+    document.getElementById("copy").addEventListener("click", function () {
+      var btn = this;
+      navigator.clipboard.writeText(code).then(function () {
+        btn.textContent = "コピーしました";
+        setTimeout(function () { btn.textContent = "コピー"; }, 2000);
+      });
+    });
+  })();
+</script>
+</body>
+</html>
