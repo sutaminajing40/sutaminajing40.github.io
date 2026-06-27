@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tane（たね）サポート</title>
+<meta name="description" content="声で書く、AIが整える。メモアプリ Tane（たね）のサポートページ。">
+<style>
+  :root{
+    --bg:#FAF6F2;
+    --surface:#FFFFFF;
+    --ink:#2A1C13;
+    --ink-soft:#6A5848;
+    --line:#E7D9CD;
+    --accent:#B4471F;
+    --accent-soft:#F6E9E2;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:56px 22px 80px}
+  header{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+  .mark{width:46px;height:46px;border-radius:11px;flex:0 0 auto;
+    background:var(--accent-soft);position:relative;border:1px solid var(--line)}
+  .mark::before{content:"";position:absolute;left:50%;top:54%;width:3px;height:17px;
+    transform:translateX(-50%);background:var(--accent);border-radius:2px}
+  .mark::after{content:"";position:absolute;left:50%;top:30%;width:20px;height:13px;
+    transform:translateX(-50%);
+    background:radial-gradient(circle at 30% 60%,var(--accent) 0 42%,transparent 43%),
+               radial-gradient(circle at 70% 60%,#9A3B16 0 42%,transparent 43%)}
+  h1{font-size:25px;margin:0;letter-spacing:.02em}
+  .lead{color:var(--ink-soft);margin:6px 0 36px;font-size:15px}
+  h2{font-size:17px;margin:40px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  p,li{font-size:15px;color:var(--ink)}
+  ul{padding-left:1.2em;margin:10px 0}
+  li{margin:7px 0}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;margin:14px 0}
+  .q{font-weight:600;margin:0 0 4px}
+  .a{margin:0;color:var(--ink-soft);font-size:14.5px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .mail{display:inline-block;margin-top:6px;font-weight:600;font-size:16px}
+  footer{margin-top:54px;padding-top:18px;border-top:1px solid var(--line);
+    color:var(--ink-soft);font-size:13px;display:flex;gap:18px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark" aria-hidden="true"></div>
+    <h1>Tane（たね）</h1>
+  </header>
+  <p class="lead">声で書く、AIが整える。思いついた瞬間に話すだけのメモアプリ。</p>
+
+  <h2>使い方</h2>
+  <ul>
+    <li><strong>声でメモ：</strong>アプリを開いて録音ボタンを押し、話すだけ。音声がそのまま文字になります。</li>
+    <li><strong>Siriでメモ：</strong>「Hey Siri、Tane」と話すと、アプリを開かずに（ロック中でも）メモを残せます。</li>
+    <li><strong>AIが整える：</strong>端末内のAIが、話した内容をタイトル・本文・タグ・ToDo に自動で整理します。</li>
+    <li><strong>すべて端末内：</strong>メモは iPhone の中だけに保存され、外部に送信されません。</li>
+  </ul>
+
+  <h2>よくある質問</h2>
+  <div class="card">
+    <p class="q">Siri から呼び出せません</p>
+    <p class="a">初回は一度アプリを起動してください。設定 &gt; Siri と検索 で Tane が有効になっているかご確認ください。トリガーの言葉は「Tane（たね）」です。</p>
+  </div>
+  <div class="card">
+    <p class="q">メモはどこに保存されますか？</p>
+    <p class="a">すべて iPhone 本体の中（オンデバイス）に保存されます。当社のサーバーには送信・保管されません。</p>
+  </div>
+  <div class="card">
+    <p class="q">AIの整形はインターネットを使いますか？</p>
+    <p class="a">いいえ。Apple Intelligence のオンデバイスAIで処理するため、本文が端末の外に出ることはありません。</p>
+  </div>
+  <div class="card">
+    <p class="q">機種変更でメモは引き継げますか？</p>
+    <p class="a">iCloud バックアップ経由で端末を復元すると引き継がれます（標準のバックアップ設定に準じます）。</p>
+  </div>
+
+  <h2>お問い合わせ</h2>
+  <p>ご質問・ご要望・不具合のご報告は、以下のメールアドレスまでお気軽にご連絡ください。</p>
+  <a class="mail" href="mailto:contact.meridian.jp@gmail.com">contact.meridian.jp@gmail.com</a>
+
+  <footer>
+    <a href="./privacy.html">プライバシーポリシー</a>
+    <span>提供：Meridian（井口滉大）</span>
+  </footer>
+</div>
+</body>
+</html>
